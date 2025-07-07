@@ -4,71 +4,15 @@ import Footer from "../components/Footer";
 import MarqueeComp from "../components/MarqueeComp";
 import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { runAboutAnimations } from "../animations/aboutAnimations";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const textRef = useRef();
-  const textRef2 = useRef();
-  const textRef3 = useRef();
-  const imgRef = useRef();
-  const imgRef1 = useRef();
-  const imgRef2 = useRef();
-  const imgRef3 = useRef();
-  const imgRef4 = useRef();
-  const imgRef5 = useRef();
-  const zoomRef1 = useRef();
-  const zoomRef2 = useRef();
-  const zoomRef3 = useRef();
-  const zoomRef4 = useRef();
-  const zoomRef5 = useRef();
-  const zoomRef6 = useRef();
-  const fadeleftRef = useRef();
-  const faderightRef = useRef();
-
-  const imgRefs = useRef([]);
-  const zoomRefs = useRef([]);
-
-  useEffect(() => {
-    imgRefs.current = [
-      imgRef.current,
-      imgRef1.current,
-      imgRef2.current,
-      imgRef3.current,
-      imgRef4.current,
-      imgRef5.current,
-    ];
-    zoomRefs.current = [
-      zoomRef1.current,
-      zoomRef2.current,
-      zoomRef3.current,
-      zoomRef4.current,
-      zoomRef5.current,
-      zoomRef6.current,
-    ];
-
-   const ctx = runAboutAnimations({
-    textRef,
-    textRef2,
-    textRef3,
-    imgRefs,
-    zoomRefs,
-    fadeleftRef,
-    faderightRef,
-  });
-
-  return () => ctx.revert();
-}, []);
-
+  
   return (
     <>
       <section className="py-5 bg-dark">
         <div className="container">
           <div className="row mt-lg-5">
-            <div className="col6 col-md-6 py-lg-5" ref={textRef}>
+            <div className="col6 col-md-6 py-lg-5" >
               <h1 className="heading11">
                 KNOW ABOUT <br />{" "}
                 <span style={{ color: "rgb(251, 169, 25)" }}> OUR STORY </span>
@@ -84,7 +28,7 @@ const About = () => {
             <div className="col-md-1"></div>
             <div className="col-md-5">
               <img
-                ref={imgRef}
+              
                 src="/imagesff/About-image1.webp"
                 alt=""
                 width="100%"
@@ -99,14 +43,13 @@ const About = () => {
           <div className="row">
             <div className="col-md-5  text-center">
               <img
-                ref={imgRef5}
                 className="img11"
                 src="/imagesff/home-Priyanksukhija.webp"
                 alt=""
               />
             </div>
             <div className="col-md-1"></div>
-            <div className="col6 col-md-6 " ref={zoomRef1}>
+            <div className="col6 col-md-6 ">
               <h1 className="heading11 mt-5 py-2">
                 THE GAME{" "}
                 <span style={{ color: "rgb(251, 169, 25)" }}> CHANGER</span>
@@ -140,13 +83,12 @@ const About = () => {
           <div className="row">
             <div className="col-md-6 ">
               <img
-                ref={imgRef1}
                 src="/imagesff/about-map.webp"
                 alt=""
                 style={{ width: "95%" }}
               />
             </div>
-            <div className="col6 col-md-6 px-3" ref={zoomRef2}>
+            <div className="col6 col-md-6 px-3">
               <div className="row">
                 <div className="col-md-4 about">
                   <h4>DIABLO</h4>
@@ -218,19 +160,19 @@ const About = () => {
       <section className="py-1 bg-dark d-lg-none">
         <div className="container">
           <h1 className="heading11 text-white text-center py-3 mb-2">
-            EXISTING{" "}
+            EXISTING{" "} <br/>
             <span style={{ color: "rgb(251, 169, 25)" }}>FOOTPRINTS</span>
           </h1>
           <div className="row">
             <div className="col-md-6 mb-5">
               <img
-                ref={imgRef2}
+              
                 src="/imagesff/about-map.webp"
                 alt=""
                 style={{ width: "95%" }}
               />
             </div>
-            <div className="col6 col-md-6 mt-3" ref={zoomRef3}>
+            <div className="col6 col-md-6 mt-3" >
               <div className="row">
                 <div className="col-6 about">
                   <h4>DIABLO</h4>
@@ -304,7 +246,7 @@ const About = () => {
             <span style={{ color: "rgb(251, 169, 25)" }}>FOOTPRINTS</span>
           </h1>
           <div className="row">
-            <div className="col6 col-md-4" ref={zoomRef4}>
+            <div className="col6 col-md-4" >
               <div className="row">
                 <div className="col-md-6 about">
                   <h4>DIABLO</h4>
@@ -339,7 +281,6 @@ const About = () => {
             <div className="col-md-2"></div>
             <div className="col-md-6 text-center ">
               <img
-                ref={imgRef3}
                 src="/imagesff/about-map.webp"
                 alt=""
                 style={{ width: "95%" }}
@@ -351,20 +292,19 @@ const About = () => {
       <section className="py-5 bg-dark d-lg-none">
         <div className="container">
           <h1 className="heading11 text-white text-center py-3 mb-2">
-            UPCOMING
-            <span style={{ color: "rgb(251, 169, 25)" }}>FOOTPRINTS</span>
+            UPCOMING <br/>
+            <span style={{ color: "rgb(251, 169, 25)" }}> FOOTPRINTS</span>
           </h1>
           <div className="row">
             <div className="col-md-6 text-center mb-5">
               <img
-                ref={imgRef4}
                 src="/imagesff/about-map.webp"
                 alt=""
                 style={{ width: "95%" }}
               />
             </div>
             <div className="col-md-2"></div>
-            <div className="col6 col-md-4 py-3 " ref={zoomRef5}>
+            <div className="col6 col-md-4 py-3 ">
               <div className="row">
                 <div className="col-6 about">
                   <h4>DIABLO</h4>
@@ -403,7 +343,7 @@ const About = () => {
       <section className="py-5 bg-dark">
         <div className="container">
           <div className="row mb-3">
-            <div className="col-md-4 d-lg-none text-center " ref={textRef2}>
+            <div className="col-md-4 d-lg-none text-center ">
               <h1 className="heading11">
                 MEET THE
                 <span style={{ color: "rgb(251, 169, 25)" }}> TEAM</span>
@@ -420,7 +360,7 @@ const About = () => {
             <div className="col-md-4 mb-3 text-center about">
               <img src="/imagesff/about-img2.webp" className="img11" alt="" />
             </div>
-            <div className="col-md-4 d-lg-block d-none " ref={textRef3}>
+            <div className="col-md-4 d-lg-block d-none ">
               <h1 className="heading11">
                 MEET THE <br />{" "}
                 <span style={{ color: "rgb(251, 169, 25)" }}>TEAM</span>
@@ -435,7 +375,6 @@ const About = () => {
           <div className="row">
             <div className="col-md-4 mb-3 text-center about">
               <img
-                ref={fadeleftRef}
                 src="/imagesff/about-img3.webp"
                 className="img11"
                 alt=""
@@ -443,7 +382,6 @@ const About = () => {
             </div>
             <div className="col-md-4 mb-3 text-center about">
               <img
-                ref={zoomRef6}
                 src="/imagesff/about-img4.jpeg"
                 className="img11"
                 alt=""
@@ -451,7 +389,6 @@ const About = () => {
             </div>
             <div className="col-md-4 mb-3 text-center about">
               <img
-                ref={faderightRef}
                 src="/imagesff/about-img-5.jpeg"
                 className="img11"
                 alt=""

@@ -4,39 +4,15 @@ import MarqueeComp from "../components/MarqueeComp";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { runContactAnimations } from "../animations/contactAnimations";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const zoomRef1 = useRef();
-  const zoomRef2 = useRef();
-  const fadeleftRef1 = useRef();
-  const fadeleftRef2 = useRef();
-  const fadeleftRef3 = useRef();
-  const faderightRef1 = useRef();
-  const faderightRef2 = useRef();
-  const imgRef1 = useRef();
-
-  useEffect(() => {
-    const ctx = runContactAnimations({
-      zoomRef1,
-      zoomRef2,
-      fadeleftRefs: [fadeleftRef1, fadeleftRef2, fadeleftRef3],
-      faderightRefs: [faderightRef1, faderightRef2],
-      imgRef1,
-    });
-
-    return () => ctx.revert(); 
-  }, []);
+ 
   return (
     <>
       <section className="py-5 bg-dark">
         <div className="container">
           <div className="row">
-            <div className="col6 col-md-6" ref={fadeleftRef3}>
+            <div className="col6 col-md-6">
               <h1 className="heading1 marginhc">
                 KNOW MORE
                 <br />{" "}
@@ -59,7 +35,7 @@ const Contact = () => {
               </p>
             </div>
             <div className="col-md-1"></div>
-            <div className="col-md-5 " ref={imgRef1}>
+            <div className="col-md-5 ">
               <div className=" cardstyle" style={{ width: "100%" }}>
                 <h2 className="text-white text-center fw-bold">CONTACT US!</h2>
 
@@ -152,7 +128,7 @@ const Contact = () => {
         </h1>
         <div className="container">
           <div className="row mb-3">
-            <div className="col-md-4 mb-5 contact" ref={fadeleftRef1}>
+            <div className="col-md-4 mb-5 contact" >
               <div className="card card2">
                 <img
                   className="img12"
@@ -168,7 +144,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 mb-5 contact" ref={zoomRef1}>
+            <div className="col-md-4 mb-5 contact" >
               <div className="card card2">
                 <img
                   className="img12"
@@ -184,7 +160,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 mb-5 contact" ref={faderightRef1}>
+            <div className="col-md-4 mb-5 contact">
               <div className="card card2">
                 <img
                   className="img12"
@@ -201,7 +177,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="row ">
-            <div className="col-md-4 mb-5 contact" ref={fadeleftRef2}>
+            <div className="col-md-4 mb-5 contact" >
               <div className="card card2">
                 <img
                   className="img12"
@@ -216,7 +192,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 mb-5 contact" ref={zoomRef2}>
+            <div className="col-md-4 mb-5 contact">
               <div className="card card2">
                 <img
                   className="img12"
@@ -232,7 +208,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 mb-5 contact" ref={faderightRef2}>
+            <div className="col-md-4 mb-5 contact">
               <div className="card card2">
                 <img
                   className="img12"

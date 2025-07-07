@@ -1,14 +1,12 @@
 🍽️ FirstFiddle Website Clone
 
-A responsive restaurant website clone of FirstFiddle.in built using React + Vite and styled with Bootstrap CSS. This project replicates the frontend of FirstFiddle, a popular F&B brand, and includes scroll-triggered animations using GSAP for a modern user experience.
+A responsive restaurant website clone of FirstFiddle.in built using React + Vite and styled with Bootstrap CSS. This project replicates the frontend of FirstFiddle, a popular F&B brand.
 
 🚀 Features :
 
 ✅ Fully Responsive Design (Mobile, Tablet, Desktop).
 ⚛️ Built with React + Vite (lightweight & fast).
 🎨 Styled using Bootstrap CSS.
-✨ Smooth animations using GSAP.
-📜 Scroll-triggered effects with ScrollTrigger plugin.
 🧱 Component-based architecture.
 
 🌐 Multiple Pages with Routing:
@@ -26,7 +24,6 @@ A responsive restaurant website clone of FirstFiddle.in built using React + Vite
 
 - Frontend: HTML, JAVASCRIPT, React-Vite.
 - Styling: Bootstrap 5, Custom CSS.
-- Animations: GSAP (gsap, ScrollTrigger).
 - Routing: React Router DOM.
 
 📂 Project Structure - 
@@ -34,7 +31,6 @@ A responsive restaurant website clone of FirstFiddle.in built using React + Vite
 src/
 ├── components/       # Reusable UI components (Navbar, Footer, Marquee)
 ├── pages/            # Page components (Home, About, Contact, etc.)
-├── animations/       # All GSAP animation files
 ├── assets/           # Images, icons, etc.
 ├── App.jsx
 └── main.jsx

@@ -3,39 +3,16 @@ import MarqueeComp from "../components/MarqueeComp";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { runBrandAnimations } from "../animations/brandAnimations";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Brands = () => {
    
-  const brandRefs = useRef([]);
-  brandRefs.current = [];
-
-  const fadeleftRef = useRef();
-  const zoomRef1 = useRef();
-
-  const addToBrandRefs = (el) => {
-    if (el && !brandRefs.current.includes(el)) {
-      brandRefs.current.push(el);
-    }
-  };
-
-  useEffect(() => {
-    const ctx = runBrandAnimations({ brandRefs, fadeleftRef, zoomRef1 });
-    return () => ctx.revert();
-  }, []);
-
-
   return (
     <>
       {/* Section 1: Intro */}
       <section className="py-5 bg-dark ">
         <div className="container">
           <div className="row mt-lg-5">
-            <div className="col6 col-md-6 " ref={fadeleftRef}>
+            <div className="col6 col-md-6 " >
               <h1 className="heading12 marginhh">
                 KNOW ABOUT <br />
                 <span style={{ color: "rgb(251, 169, 25)" }}>OUR BRANDS</span>
@@ -48,7 +25,7 @@ const Brands = () => {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5 text-center">
-              <img ref={zoomRef1} src="/imagesff/About-image1.webp" alt="About" width="95%" />
+              <img  src="/imagesff/About-image1.webp" alt="About" width="95%" />
             </div>
           </div>
         </div>
@@ -71,7 +48,7 @@ const Brands = () => {
           ].map((row, i) => (
             <div className="row" key={i} >
               {row.map((img, j) => (
-                <div className="col-md-4 text-center mb-5" key={j} ref={addToBrandRefs}>
+                <div className="col-md-4 text-center mb-5" key={j} >
                   <a href="#">
                     <img
                       src={`/imagesff/${img}`}

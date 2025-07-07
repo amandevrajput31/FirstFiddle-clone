@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="navbar-logo ">
          <NavLink to={"/"}><img src="/imagesff/logo-01.webp" alt="Logo" className="headerimg "/></NavLink> 
         </div>
-        <div className="menu-icon  px-3" onClick={toggleMenu}>
+        <div className="menu-icon " onClick={toggleMenu}>
           <FontAwesomeIcon icon={faBarsStaggered} style={{fontSize:"28px"}}/>
         </div>
        

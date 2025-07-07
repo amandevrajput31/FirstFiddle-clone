@@ -4,45 +4,8 @@ import MarqueeComp from "../components/MarqueeComp";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { runHomeAnimations } from "../animations/homeAnimations";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const imageRef = useRef();
-  const textRefDesktop = useRef();
-  const brandRefs = useRef([]);
-  const textRefSection2Desktop = useRef();
-  const textRefSection2Mobile = useRef();
-  const imgRefSection2Desktop = useRef();
-  const imgRefSection2Mobile = useRef();
-
-  brandRefs.current = [];
-  const addToBrandRefs = (el) => {
-    if (el && !brandRefs.current.includes(el)) {
-      brandRefs.current.push(el);
-    }
-  };
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      runHomeAnimations({
-        imageRef,
-        textRefDesktop,
-        brandRefs,
-        textRefSection2Desktop,
-        textRefSection2Mobile,
-        imgRefSection2Desktop,
-        imgRefSection2Mobile,
-      });
-
-      ScrollTrigger.refresh();
-    });
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <>
@@ -61,13 +24,13 @@ const Home = () => {
           <div className="row mt-lg-5">
             <div className="col-md-6 text-center mb-5">
               <img
-                ref={imageRef}
+                
                 className="img11"
                 src="/imagesff/homefirstfiddle.webp"
                 alt=""
               />
             </div>
-            <div className="col-md-6 px-lg-5" ref={textRefDesktop}>
+            <div className="col-md-6 px-lg-5" >
               <h1 className="heading1 d-lg-block d-none">
                 GET TO <br /> KNOW{" "}
                 <span style={{ color: "rgb(251, 169, 25)" }}>US</span>{" "}
@@ -93,7 +56,7 @@ const Home = () => {
       <section className="py-5 bg-dark d-lg-block d-none">
         <div className="container">
           <div className="row">
-            <div className="col-md-6" ref={textRefSection2Desktop}>
+            <div className="col-md-6" >
               <h1 className="heading1 mt-5 py-3">
                 The Game{" "}
                 <span style={{ color: "rgb(251, 169, 25)" }}> Changer</span>
@@ -122,7 +85,7 @@ const Home = () => {
                 className="img11"
                 src="/imagesff/home-Priyanksukhija.webp"
                 alt=""
-                ref={imgRefSection2Desktop}
+                
               />
             </div>
           </div>
@@ -136,11 +99,11 @@ const Home = () => {
                 className="img11"
                 src="/imagesff/home-Priyanksukhija.webp"
                 alt=""
-                ref={imgRefSection2Mobile}
+                
               />
             </div>
             <div className="col-md-1"></div>
-            <div className="col-md-6 text-center" ref={textRefSection2Mobile}>
+            <div className="col-md-6 text-center" >
               <h1 className="heading1 mt-5 py-3">
                 The Game
                 <span style={{ color: "rgb(251, 169, 25)" }}> Changer</span>
@@ -171,34 +134,34 @@ const Home = () => {
             PICK A <span style={{ color: "rgb(251, 169, 25)" }}>BRAND</span>
           </h1>
           <div className="row mt-5 ">
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE1.jpg" alt="" width="95%" />
               </a>
             </div>
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE2.jpg" alt="" width="95%" />
               </a>
             </div>
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE3.jpg" alt="" width="95%" />
               </a>
             </div>
           </div>
           <div className="row ">
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE4.jpg" alt="" width="95%" />
               </a>
             </div>
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE5.jpg" alt="" width="95%" />
               </a>
             </div>
-            <div className="col-md-4 text-center mb-5" ref={addToBrandRefs}>
+            <div className="col-md-4 text-center mb-5" >
               <a href="">
                 <img src="/imagesff/homePAB-IMAGE6.png" alt="" width="95%" />
               </a>

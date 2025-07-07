@@ -1,51 +1,8 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const MarqueeComp = () => {
-  const zoomRef1 = useRef();
-  const zoomRef2 = useRef();
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Text zoom-in (desktop)
-      if (zoomRef1.current) {
-        gsap.from(zoomRef1.current, {
-          scrollTrigger: {
-            trigger: zoomRef1.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-          scale: 0.8,
-          opacity: 0,
-          duration: 0.9,
-          ease: "power3.out",
-        });
-      }
-      // Text zoom-in (desktop)
-      if (zoomRef2.current) {
-        gsap.from(zoomRef2.current, {
-          scrollTrigger: {
-            trigger: zoomRef2.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-          scale: 0.8,
-          opacity: 0,
-          duration: 0.9,
-          ease: "power3.out",
-        });
-      }
-
-      ScrollTrigger.refresh();
-    });
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <>
@@ -61,7 +18,7 @@ const MarqueeComp = () => {
           <div className="content py-5">
             <h1
               className="heading1 text-center text-white mb-3 "
-              ref={zoomRef1}
+              
             >
               BE THE PART OF{" "}
               <span style={{ color: "rgb(251, 169, 25)" }}>OUR JOURNEY </span>{" "}
@@ -157,8 +114,7 @@ const MarqueeComp = () => {
       <section className="d-lg-none">
         <div className="bg-img content py-5">
           <h1
-            className="heading-marquee text-center text-white mb-3"
-            ref={zoomRef2}
+            className="heading-marquee text-center text-white mb-3"          
           >
             BE THE PART OF{" "}
             <span style={{ color: "rgb(251, 169, 25)" }}>OUR JOURNEY </span>
